@@ -31,19 +31,21 @@
         <form action="enviar.php" method="post" class="form_contact">
             <h2>Envia un mensaje</h2>
             <div class="user_info">
-                <label for="names">Nombre(s) y Apellido(s)&nbsp; &nbsp; &nbsp;&nbsp;</label>
+                <label for="names">Nombre(s) y Apellido(s) *&nbsp; &nbsp; &nbsp;&nbsp;</label>
                 <input type="text" id="names" name="nombre" required>
                 
 				<label for="email">Correo electronico *</label>
                 <input type="text" id="email" name="correo" required>
 				
-				<label for="asunto">Asunto *</label>
+				<label for="asunto">Asunto</label>
                 <input type="text" id="asunto" name="asunto" required>
 
                 <label for="mensaje">Mensaje *</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
 
                 <input type="submit" value="Enviar Mensaje" id="btnSend">
+
+                * Campos obligatorios
           </div>
         </form>
 
