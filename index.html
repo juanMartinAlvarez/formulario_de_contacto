@@ -1,48 +1,53 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de contacto</title>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
 
-	<title>TP 1</title>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
-
 <body>
-	<div class="col">
-		<div id="cnt_form">
-			<form id="contact-form" class="contact" name="contact-form" method="post" action="enviar2.php">
-				<div class="form-group">
-					<input type="text" name="nombre" class="form-control name-field" required="required"
-						placeholder="Nombre">
-				</div>
-				<div class="form-group">
-					<input type="text" name="apellido" class="form-control name-field" required="required"
-						placeholder="apellido">
-				</div>
-				<div class="form-group">
-					<input type="email" name="email" class="form-control mail-field" required="required"
-						placeholder="Email">
-				</div>
-				<div class="form-group">
-					<input type="text" name="asunto" class="form-control" required="required"
-						placeholder="asunto">
-				</div>
-				<div class="form-group">
-					<textarea name="mensaje" id="message" required="required" class="form-control" rows="8"
-						placeholder="Mensaje"></textarea>
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary">Enviar</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</body>
 
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+              <span class="fa fa-user-circle"></span>
+              <h2> TP 1 Envio de formulario </h2>
+              <h2>&nbsp;</h2>
+              <h2>DESARROLLO WEB </h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-university">&nbsp;IFTS 16</span> </p>
+			</section>
+        </section>
+
+        <form action="enviar.php" method="post" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombre(s) y Apellido(s)&nbsp; &nbsp; &nbsp;&nbsp;</label>
+                <input type="text" id="names" name="nombre" required>
+                
+				<label for="email">Correo electronico *</label>
+                <input type="text" id="email" name="correo" required>
+				
+				<label for="asunto">Asunto *</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <input type="submit" value="Enviar Mensaje" id="btnSend">
+          </div>
+        </form>
+
+    </section>
+
+</body>
 </html>
