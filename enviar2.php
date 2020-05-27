@@ -1,23 +1,20 @@
 <?php
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido']
-$mail = $_POST['email'];
-$asunto = $_POST['asunto'];
-$empresa = $_POST['mensaje'];
+	// Llamando a los campos del form
+	$asunto = $_POST['asunto'];
+	$nombre = $_POST['nombre'];
+	$apellido = $_POST['apellido'];
+	$email = $_POST['email'];
+	$mensaje = $_POST['mensaje'];
+	// Formato del correo
+	$envio = "$asunto \n";
+	$envio .= "Nombre:  $nombre \n";
+	$envio .= "Apellido: $apellido \n";
+	$envio .= "Correo: $email \n";
+	$envio .= "Mensaje: $mensaje";	
 
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+	//$destinatario = "mcferrocroce@gmail.com";
+	$destinatario = "juan_martin_alvarez@yahoo.com.ar";
+	mail($destinatario, $asunto, utf8_decode($envio));
 
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['mensaje'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
-
-$para = 'mcferrocroce@gmail.com';
-
-mail($para, $asunto, utf8_decode($mensaje), $header);
-
-header("Location:index.html");
+	header("Location: mensaje-de-envio.html");
 ?>
