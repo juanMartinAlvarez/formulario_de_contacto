@@ -1,30 +1,44 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>TP 1</title>
-	</head>
-	<body>
-		<div class="col-sm-6"> 
-			<div id="cnt_form">
-				<form id="contact-form" class="contact" name="contact-form" method="post" action="enviar2.php">
-					<div class="form-group">
-						<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nombre">
-					</div>
-					<div class="form-group">
-						<input type="text" name="lastName" class="form-control name-field" required="required" placeholder="Apellido">
-					</div>
-					<div class="form-group">
-						<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Email">
-					</div> 
-					<div class="form-group">
-						<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
-					</div> 
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Send</button>
-					</div>
-				</form> 
-			</div>
-		</div>	
-	</body>
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<title>TP 1</title>
+</head>
+
+<body>
+	<div class="col-sm-6">
+		<div id="cnt_form">
+			<form id="contact-form" class="contact" name="contact-form" method="post" action="enviar2.php">
+				<div class="form-group">
+					<input type="text" name="name" class="form-control name-field" required="required"
+						placeholder="Nombre">
+				</div>
+				<div class="form-group">
+					<input type="text" name="lastName" class="form-control name-field" required="required"
+						placeholder="Apellido">
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" class="form-control mail-field" required="required"
+						placeholder="Email">
+				</div>
+				<div class="form-group">
+					<textarea name="message" id="message" required="required" class="form-control" rows="8"
+						placeholder="Message"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">Send</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
 </html>
