@@ -7,8 +7,8 @@
 }
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     box-sizing:border-box;
 }
 
@@ -43,8 +43,8 @@ body{
     height: 100%;
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 0%;
 
     background: #4091EC;
     opacity: 0.9;
@@ -111,7 +111,7 @@ body{
 
 /* Formulario de contacto*/
 form.form_contact{
-    width: 62%;
+    width: 80%;
     padding: 30px 40px;
 }
 
@@ -123,8 +123,9 @@ form.form_contact h2{
 }
 
 form.form_contact .user_info{
-    display: flex;
-    flex-direction: column;
+    display: table;
+    clear:both;
+    resize: vertical;
 }
 
 form.form_contact label{
@@ -265,3 +266,35 @@ form.form_contact input[type="submit"]:hover{
 .mensaje-exito a:hover{
     background: #3371B6;
 }
+
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .user_info, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+    .form_wrap{
+        width: 90%;
+        display: table;
+        box-sizing: content-box;
+    }
+    .cantact_info{
+        width: 0%;
+    }
+    .cantact_info::before{
+        width: 0%;
+    }
+    .info_title, .info_items{
+        width: 0%;
+        font-size: 0;
+        display: none;
+    }
+  }
